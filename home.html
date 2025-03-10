@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Estate Elite</title>
+   <link rel="stylesheet" href="home.css">
+   <link rel="stylesheet" href="media.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />        
+   <script src="home.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="nav-major">
+        <div class="navbar1">
+            <div class="logo">
+                <a href="#">Estate Elite</a>
+            </div>
+            <nav>
+                <ul class="nav-links1">
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown1">
+                        <a href="#">Listings</a>
+                        
+                    </li>
+                    <li class="dropdown1">
+                        <a href="http://localhost:3000/">Blogs</a>
+                        
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#aboutus">About Us</a>
+                    </li>
+                    <li class="dropdown1">
+                        <a href="#">Contact Us</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <div class="auth-links">
+                <a href="login.html" class="sign-in-button">Sign In</a>
+              
+              
+            </div>
+        </header>
+
+
+    <div class="overlay">
+        <video autoplay loop muted plays inline class="background-clip">
+            <source src="assets/bg.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay2">
+        <img src="assets/estate.png">
+        <div class="social-icons">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+        
+        </div>
+    </div>
+    <div id="menudiv">
+    <div class="menu">
+        <span class="menu-item active" onclick="changeSearch('Buy', 'Search &quot;Hyderabad&quot;')">Buy</span>
+        <span class="menu-item" onclick="changeSearch('Rent', 'Search Rental in &quot;Hyderabad&quot;')">Rent</span>
+        <span class="menu-item" onclick="changeSearch('New Launch', 'Search New Launch in &quot;Hyderabad&quot;')">New Launch</span>
+        <span class="menu-item" onclick="changeSearch('PG / Co-living', 'Search PG/Co-living in &quot;Hyderabad&quot;')">PG / Co-living</span>
+        <span class="menu-item" onclick="changeSearch('Commercial', 'Search Commercial in &quot;Hyderabad&quot;')">Commercial</span>
+        <span class="menu-item" onclick="changeSearch('Plots/Land', 'Search Plots/Land in &quot;Hyderabad&quot;')">Plots/Land</span>
+        <span class="menu-item" onclick="changeSearch('Projects', 'Search Projects in &quot;Hyderabad&quot;')">Projects</span>
+    </div>
+
+    <div class="search-bar">
+        <select id="propertyType" name="propertyType">
+            <option value="all">All Residential</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="text" id="searchBox" placeholder="Search &quot;Hyderabad&quot;">
+        <button class="button" onclick="executeSearch()">Search</button>
+    </div>
+</div>
+</div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+<section class="about-section">
+  <div  id="aboutus" class="about-container">
+      <!-- Left Image Section -->
+      <div class="about-image">
+          <img src="assets/about1.png" alt="Room Image">
+          
+      </div>
+
+      <!-- Right Content Section -->
+      <div class="about-content">
+          <div class="about-tag">
+              <span>About Us</span>
+          </div>
+          <h1>The Leading Real Estate Rental Marketplace.</h1>
+          <p>Over 39,000 people work for us in more than 70 countries all over the world. This breadth of global coverage, combined with specialist services.</p>
+          
+          <!-- Icon Section -->
+          <div class="features">
+              <div class="feature-item">
+                  <span class="icon">🏡</span>
+                  <p>Smart Home Design</p>
+              </div>
+              <div class="feature-item">
+                  <span class="icon">🌿</span>
+                  <p>Beautiful Scene Around</p>
+              </div>
+              <div class="feature-item">
+                  <span class="icon">🍸</span>
+                  <p>Exceptional Lifestyle</p>
+              </div>
+              <div class="feature-item">
+                  <span class="icon">🛡️</span>
+                  <p>Complete 24/7 Security</p>
+              </div>
+          </div>
+
+          <!-- Quote Section -->
+          <blockquote class="quote">
+              "Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet"
+          </blockquote>
+
+          <!-- Button -->
+          <a href="#" class="services-btn">OUR SERVICES</a>
+      </div>
+  </div>
+</section>
+
+   
+<!-- -------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+<!-- -------------------------------------- buy rent sell-------------------------------------------------------------- -->
+<div id="service" class="con"><p style="color: grey;"><b>All property needs one portal</b></p>
+<h1 >Find Better Places to Live, Work and Wonder...</h1></div>
+<div class="swiper0">
+<div  class="swiper mySwiper0">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide0">
+      <div class="img"></div>
+      <div class="write">
+      <p style="color: grey;"><b>Buy a home</b></p>
+      <h1>Find, Buy & Own Your Dream Home</h1>
+      <p style="color: grey;">Explore from Apartments, land, builder floors, villas and more</p><br>
+      <button><b>Explore Buying</b></button>
+      
+      <p>Swiper To rent or post a property...</p>
+      </div>
+      </div>
+      <div class="swiper-slide swiper-slide0">
+        <div class="img2"></div>
+      <div class="write">
+      <p style="color: grey;"><b>Rent a home</b></p>
+      <h1>Rental Homes for Everyone</h1>
+      <p style="color: grey;">Explore from Apartments, builder floors, villas and more</p><br>
+      <button><b>Explore Renting</b></button>
+      </div>
+      </div>
+      <div class="swiper-slide swiper-slide0">
+        <div class="img3"></div>
+      <div class="write">
+      <p style="color: grey;"><b>Sell a home</b></p>
+      <h1>Register to post your property for
+        FREE</h1>
+      <p style="color: grey;">Sell or rent your residential/ commercial property</p><br>
+      <button style="width: 300px;"><b>Post Your Property for FREE</b></button>
+      </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper0", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <!-- -------------------------------------------------------------------------------------------------------------- -->
+  <div class="background">
+    <div class="unique-content">
+        <h1>Insights and Tools</h1>
+        <p>Go from Browsing To<br>  Buying</p>
+    </div>
+    <div class="unique-slider-container">
+        <button class="unique-prev-btn" onclick="slideLeft()">&#10094;</button>
+        <div class="unique-slider" id="slider4">
+            <a href="#"><div class="unique-card">
+                <span class="material material-symbols-outlined">
+                    elevation
+                </span>
+                <h2>Property Rates</h2>
+                <p>Check property rates and<br>  prices</p>
+            </div></a>
+            <a href="#"><div class="unique-card">
+                <span class="material material-symbols-outlined">
+                    add_reaction
+                </span>
+                <h2>Genuine reviews</h2>
+                <p>Know what residents are<br>  saying</p>
+            </div></a>
+            <a href="#"><div class="unique-card">
+                <span class="material material-symbols-outlined">
+                    payments
+                </span>
+                <h2>Transaction Prices</h2>
+                <p>Check property transaction<br> 
+                    values</p>
+            </div></a>
+            <a href="emi.html"><div class="unique-card">
+                <span class="material material-symbols-outlined">
+                    date_range
+                </span>
+                <h2>EMI Calculator</h2>
+                <p>Calculate the EMI for your estate</p>
+            </div></a>
+            <a href="loan.html"><div class="unique-card">
+                <span class="material material-symbols-outlined">
+                    real_estate_agent
+                </span>
+                <h2>Loan Calculator</h2>
+                <p>Calculate the EMI for your estate</p>
+            </div></a>
+        </div>
+        <button class="unique-next-btn" onclick="slideRight()">&#10095;</button>
+    </div>
+</div>
+
+<script>
+    const slider = document.getElementById('slider4');
+    const scrollStep = 300; // Amount of pixels to scroll on each button click
+
+    function slideLeft() {
+        slider.scrollBy({
+            left: -scrollStep,
+            behavior: 'smooth'
+        });
+        updateButtonState();
+    }
+
+    function slideRight() {
+        slider.scrollBy({
+            left: scrollStep,
+            behavior: 'smooth'
+        });
+        updateButtonState();
+    }
+
+    function updateButtonState() {
+        const scrollPosition = slider.scrollLeft;
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+        if (scrollPosition <= 0) {
+            document.querySelector('.unique-prev-btn').disabled = true;
+        } else {
+            document.querySelector('.unique-prev-btn').disabled = false;
+        }
+
+        if (scrollPosition >= maxScroll) {
+            document.querySelector('.unique-next-btn').disabled = true;
+        } else {
+            document.querySelector('.unique-next-btn').disabled = false;
+        }
+    }
+
+    // Initial check to disable buttons if at start or end
+    updateButtonState();
+</script>
+
+  <!-- ----------------------------------------------sub swiper---------------------------------------------------------------- -->
+  <div class="scroll-title">
+    <p>Properties</p>
+    <h1>Featured Listings</h1>
+</div>
+  <div class="scroller-container">
+    <div class="scroller">
+        <div class="card">
+            <img id="featureimg" src="assets/f1.png" alt="House 1">
+            <div class="card-info">
+                <div class="featured-iconimg">
+                </div>
+                <h2 style="color: #25abc0;">$649,000</h2>
+                <h2>Luxury Home</h2>
+                
+                <div class="featured-icon">
+                    <div class="i1">3<span class="material-symbols-outlined">
+                        bed
+                        </span><br>Bedrooms</div>
+                    <div class="i2">2<span class="material-symbols-outlined">
+                        accessibility
+                        </span><br>Bathrooms
+                    </div>
+                    <div class="i3">3250<span class="material-symbols-outlined">
+                        check_box_outline_blank
+                        </span><br>Square feet</div>
+                </div>
+                <div class="card-info2">
+                <div class="featured-img"></div>
+                <h4 class="agent">Jack Thomas</h4><br>
+                <div class="f-icon">
+                <div class="i4"><span class="material-symbols-outlined">
+                    pan_zoom
+                    </span></div>
+                    <div class="i5"><span class="material-symbols-outlined">
+                        favorite
+                        </span></div>
+                        <div class="i6"><span class="material-symbols-outlined">
+                            add_circle
+                            </span></div>
+                        </div>
+            </div>
+            <p id="agent">Estate Agents</p>
+            </div>
+        </div>
+        <div class="card">
+            <img id="featureimg" src="assets/f.png" alt="House 1">
+            <div class="card-info">
+                <h2 style="color: #25abc0;">$15,000/ month</h2>
+                <h2>Modern Apartments</h2>
+                
+                <div class="featured-icon">
+                    <div class="i1">2<span class="material-symbols-outlined">
+                        bed
+                        </span><br>Bedrooms</div>
+                    <div class="i2">2<span class="material-symbols-outlined">
+                        accessibility
+                        </span><br>Bathrooms
+                    </div>
+                    <div class="i3">850<span class="material-symbols-outlined">
+                        check_box_outline_blank
+                        </span><br>Square feet</div>
+                </div>
+                <div class="card-info2">
+                <div class="featured-img"></div>
+                <h4 class="agent">Lisa Williams</h4><br>
+                <div class="f-icon">
+                <div class="i4"><span class="material-symbols-outlined">
+                    pan_zoom
+                    </span></div>
+                    <div class="i5"><span class="material-symbols-outlined">
+                        favorite
+                        </span></div>
+                        <div class="i6"><span class="material-symbols-outlined">
+                            add_circle
+                            </span></div>
+                        </div>
+            </div>
+            <p>Estate Agents</p>
+            </div>
+        </div>
+        <div class="card">
+            
+            <img id="featureimg" src="assets/f2.png" alt="House 1">
+            <div class="card-info">
+                <h2 style="color: #25abc0;">$20,000/month</h2>
+                <h2>Modern Apartments</h2>
+                
+                <div class="featured-icon">
+                    <div class="i1">3<span class="material-symbols-outlined">
+                        bed
+                        </span><br>Bedrooms</div>
+                    <div class="i2">2<span class="material-symbols-outlined">
+                        accessibility
+                        </span><br>Bathrooms
+                    </div>
+                    <div class="i3">3250<span class="material-symbols-outlined">
+                        check_box_outline_blank
+                        </span><br>Square feet</div>
+                </div>
+                <div class="card-info2">
+                <div class="featured-img"></div>
+                <h4 class="agent">Hannah  Brown</h4><br>
+
+                <div class="f-icon">
+                <div class="i4"><span class="material-symbols-outlined">
+                    pan_zoom
+                    </span></div>
+                    <div class="i5"><span class="material-symbols-outlined">
+                        favorite
+                        </span></div>
+                        <div class="i6"><span class="material-symbols-outlined">
+                            add_circle
+                            </span></div>
+                        </div>
+            </div>
+            <p>Estate Agents</p>
+            </div>
+        </div>
+        <div class="card">
+            <img id="featureimg" src="assets/p4.png" alt="House 1">
+            <div class="card-info">
+                <h2 style="color: #25abc0;">$349,000</h2>
+                <h2>Luxury Home</h2>
+                
+                <div class="featured-icon">
+                    <div class="i1">3<span class="material-symbols-outlined">
+                        bed
+                        </span><br>Bedrooms</div>
+                    <div class="i2">2<span class="material-symbols-outlined">
+                        accessibility
+                        </span><br>Bathrooms
+                    </div>
+                    <div class="i3">3250<span class="material-symbols-outlined">
+                        check_box_outline_blank
+                        </span><br>Square feet</div>
+                </div>
+                <div class="card-info2">
+                <div class="featured-img"></div>
+                <h4 class="agent">Lexi Thompson</h4><br>
+
+                <div class="f-icon">
+                <div class="i4"><span class="material-symbols-outlined">
+                    pan_zoom
+                    </span></div>
+                    <div class="i5"><span class="material-symbols-outlined">
+                        favorite
+                        </span></div>
+                        <div class="i6"><span class="material-symbols-outlined">
+                            add_circle
+                            </span></div>
+                        </div>
+            </div>
+            <p>Estate Agents</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+<div class="con2">
+    <h1>Upcoming projects</h1>
+    <p style="color: grey;">Visit these projects and get early bird benefits</p></div>
+    <div class="swiper mySwiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide1">
+            <div class="text-overlay">
+            <h1>New heights</h1>
+            <p>Sector 56, Chandigarh</p>
+        </div>
+        <div class="text-overlay2">
+            <p>3 BHK Apartment<br><br>
+            <b>Rs.75 lakhs</b></p>
+        </div>
+            <img src="assets/s1.png">
+            <div class="foot"> 
+                <p class="p1">Interested in this project by<br>
+                <p class="p2">Taranpreet Kaur ?</p></p>
+                <div style="background-color: #25abc0;" class="call">
+                    <i class="bi bi-telephone-fill" ></i><p><b>View Number</b></p>
+                </div>
+            </div>
+            
+            </div>
+        <div class="swiper-slide swiper-slide1">
+                <div class="text-overlay">
+                <h1>Windcross</h1>
+                <p>Sector 19, Panchkula</p>
+            </div>
+            <div class="text-overlay2">
+                <p>2 BHK Apartment<br><br>
+                <b>Rs.40 lakhs</b></p>
+            </div>
+                <img src="assets/s2.png">
+                <div class="foot"> 
+                    <p class="p1">Interested in this project by<br>
+                        <p class="p2">Taranpreet Kaur ?</p></p>
+                    <div style="background-color: #25abc0;" class="call">
+                        <i class="bi bi-telephone-fill" ></i><p><b>View Number</b></p>
+                    </div>
+                </div>
+        </div>
+        <div class="swiper-slide swiper-slide1">
+            <div class="text-overlay">
+                <h1>The Pinnacle</h1>
+                <p>Swatik Vihar, New Delhi</p>
+            </div>
+            <div class="text-overlay2">
+                <p>2,3 BHK Apartment<br><br>
+                <b>Rs 1.2 Crore</b></p>
+            </div>
+                <img src="assets/s3.png">
+                <div class="foot"> 
+                    <p class="p1">Interested in this project by<br>
+                        <p class="p2">Taranpreet Kaur ?</p></p>
+                    <div style="background-color: #25abc0;" class="call">
+                        <i class="bi bi-telephone-fill" ></i><p><b>View Number</b></p>
+                    </div>
+                </div>
+        </div>
+        <div class="swiper-slide swiper-slide1">
+            <div class="text-overlay">
+                <h1>Emerald Heights</h1>
+                <p>Ropar Highway, New Chandigarh</p>
+            </div>
+            <div class="text-overlay2">
+                <p>3,4 BHK Apartment<br><br>
+                <b>Rs 1.5 Crores</b></p>
+            </div>
+                <img src="assets/s4.png">
+                <div class="foot"> 
+                    <p class="p1">Interested in this project by<br>
+                        <p class="p2">Taranpreet Kaur ?</p></p>
+                    <div style="background-color: #25abc0;" class="call">
+                        <i class="bi bi-telephone-fill" ></i><p><b>View Number</b></p>
+                    </div>
+                </div>
+        </div>
+        <div class="swiper-slide swiper-slide1">
+            <div class="text-overlay">
+                <h1>Serenity heights</h1>
+                <p>Green Street,Vasant Vihar, Delhi</p>
+            </div>
+            <div class="text-overlay2">
+                <p>3 BHK Apartment<br><br>
+                <b>Rs.75 lakhs</b></p>
+            </div>
+                <img src="assets/s5.png">
+                <div class="foot"> 
+                    <p class="p1">Interested in this project by<br>
+                        <p class="p2">Taranpreet Kaur ?</p></p>
+                    <div style="background-color: #25abc0;" style="background-color: #25abc0;" class="call">
+                        <i class="bi bi-telephone-fill" ></i><p><b>View Number</b></p>
+                    </div>
+                </div>
+            </div>
+        <div class="swiper-slide swiper-slide1">
+            <div class="text-overlay">
+                <h1>Sovereign Suites</h1>
+                <p>Sector 10, Chandigarh</p>
+            </div>
+            <div class="text-overlay2">
+                <p>2 BHK Apartment<br><br>
+                <b>Rs.90 lakhs</b></p>
+            </div>
+                <img src="assets/s6.png">
+                <div class="foot"> 
+                    <p class="p1">Interested in this project by<br>
+                        <p class="p2">Taranpreet Kaur ?</p></p>
+                    <div style="background-color: #25abc0;" class="call">
+                        <i class="bi bi-telephone-fill" ></i><p><b>View Number</b></p>
+                    </div>
+                </div>
+        </div>
+      </div>
+      <div class="circle"><div style="color: #25abc0;" class="swiper-button-next"></div></div>
+      <div class="circle"><div style="color: #25abc0;" class="swiper-button-prev"></div></div>
+      <div style="color: #25abc0;" class="swiper-pagination"></div>
+      
+    </div>
+  
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+    <!-- Initialize Swiper -->
+    <script>
+      var mySwiper1 = new Swiper(".mySwiper1", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+<!-- -------------------------------------------------------------------------------------------------------------- -->
+ <div class="testimonials">
+    <h4>Testimonials</h4>
+    <h1 >What Clients Say</h1>
+    <p>We place huge value on strong relationships and have seen the benefit they bring to our business. Customer feedback is vital in helping us to get it right</p>
+<div class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide2">
+        <div class="review-img" style="background: url('assets/r1.png'); background-repeat: no-repeat; background-size: cover;">
+        </div>
+        <p><b>"</b> Working with Estate ELite was an absolute pleasure. Their team was incredibly knowledgeable and attentive, guiding us through every step of the home-buying process. We couldn't be happier with our new home! <b>"</b> </p>
+        <h2>Sarah. J</h2>
+        <h3> happy Customer</h3>
+      </div>
+      <div class="swiper-slide swiper-slide2">
+        <div class="review-img" style="background: url('assets/r2.png'); background-repeat: no-repeat; background-size: cover;">
+        </div>
+        <p><b>"</b>I've bought and sold several homes, but this experience with Estate Elite was by far the smoothest. Their professionalism and dedication made all the difference. Highly recommend them! <b>"</b> </p>
+        <h2>Mike L.</h2>
+        <h3> Property Dealer</h3>
+      </div>
+      <div class="swiper-slide swiper-slide2">
+        <div class="review-img" style="background: url('assets/r3.png'); background-repeat: no-repeat; background-size: cover;">
+        </div>
+        <p><b>"</b> I was impressed by how well Estate Elite understood our needs and preferences. They went above and beyond to ensure we were satisfied with our purchase. Great service and great results! <b>"</b> </p>
+        <h2>John R.</h2>
+        <h3> Home Consultant</h3>
+      </div>
+      <div class="swiper-slide swiper-slide2">
+        <div class="review-img" style="background: url('assets/r4.png'); background-repeat: no-repeat; background-size: cover;">
+        </div>
+        <p><b>"</b> The team at Estate Elite made selling our home a breeze. They handled everything with professionalism and care, and we were thrilled with the outcome. I wouldn’t hesitate to use them again! <b>"</b> </p>
+        <h2>Lily Y.</h2>
+        <h3> Property dealer</h3>
+      </div>
+      <div class="swiper-slide swiper-slide2">
+        <div class="review-img" style="background: url('assets/r5.png'); background-repeat: no-repeat; background-size: cover;">
+        </div>
+        <p><b>"</b>The level of service and expertise provided by Estate Elite was outstanding. They helped us find a perfect home in record time. Every detail was handled with care and precision. We're thrilled with our new place! <b>"</b> </p>
+        <h2>Michael S.</h2>
+        <h3>Interior Designer</h3>
+      </div>
+      <div class="swiper-slide swiper-slide2">
+        <div class="review-img" style="background: url('assets/r6.png'); background-repeat: no-repeat; background-size: cover;">
+        </div>
+        <p><b>"</b>From the initial consultation to closing, Estate Elite was there for us every step of the way. Their knowledge and dedication made the home-buying process stress-free and enjoyable. We are delighted with our new home and would recommend them to anyone! <b>"</b> </p>
+        <h2>Lisa W.</h2>
+        <h3> Financial Analyst</h3>
+      </div>
+      <div class="swiper-slide swiper-slide2">
+        <div class="review-img" style="background: url('assets/r7.png'); background-repeat: no-repeat; background-size: cover;">
+        </div>
+        <p><b>"</b> From start to finish, Estate Elite exceeded our expectations. Their expertise and personalized approach helped us find the perfect property in no time. Thank you for making our dream a reality!<b>"</b> </p>
+        <h2>Emily T.</h2>
+        <h3>Happy Customer</h3>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper2", {
+      spaceBetween: 30,
+      loop: true,
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate:20,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+
+
+
+<!-- ----------------------------------------------------------- -->
+ 
+<div class="faq-container">
+    <div class="faq-header">
+        <h2>Support</h2>
+        <h1>Frequently asked questions</h1>
+        
+        <div class="faq-categories">
+            <p>Questions about
+            <button onclick="showQuestions('credit')">Pay on Credit</button>
+            <button onclick="showQuestions('premium')">Housing Premium</button>
+            <button onclick="showQuestions('loans')">Home Loans</button>
+            <button onclick="showQuestions('protect')">Housing Protect</button></p>
+        </div>
+    </div>
+
+    <div id="credit" class="faq-content">
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">Is it safe to pay through Housing Pay Rent?</p>
+            <p class="faq-answer">Yes, it is safe. We use secure payment gateways to protect your information.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">How do I benefit by using Housing Pay Rent?</p>
+            <p class="faq-answer">You can benefit by earning reward points and ensuring timely payments.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">Are there any charges for using Housing Pay Rent?</p>
+            <p class="faq-answer">We levy a small convenience charge when you pay through credit card. The amount is mentioned in the payment page and is included in the final payment.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">Can I pay rent through Housing if my landlord is not registered on it?</p>
+            <p class="faq-answer">Of course! Your landlord will receive the rent even if he is not registered on Housing. If you have entered the correct details of the bank, the transaction will be completed and the landlord will be notified on successful completion through an SMS.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">How will my landlord receive the rent through Housing?</p>
+            <p class="faq-answer">You will be asked to enter your landlord’s bank account details. These details are verified and when you transact, Housing transfers the rent amount to your landlord’s account. The amount is usually transferred instantly. But sometimes, it may take up to 48 hours to reflect in the landlord's account</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">How can I get the rent receipt after successful rent payment?</p>
+            <p class="faq-answer">Rent receipts will be generated automatically and you will receive it on the email address that you have provided. You can also download it anytime from transaction history. Make sure that you have also provided us details such as your landlord’s PAN number and the rental address.
+            </p>
+        </div>
+    </div>
+
+    <div id="premium" class="faq-content" style="display:none;">
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">What is Housing Premium?</p>
+            <p class="faq-answer">Housing Premium is a service that offers extra benefits for premium users.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">What can be your expectation as a Home Seeker from Housing Premium?</p>
+            <p class="faq-answer">With Housing Premium, you can connect directly with owners of brokerage-free properties. We also offer assisted plans (Relax and MoneyBack) where our dedicated Relationship Managers will help you find a personalized home and provide exclusive services. This saves you both time and money! For more information, visit our Landing page https://housing.com/premium</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">What is the plan validity?</p>
+            <p class="faq-answer">Various plans have different validities, ranging from a minimum of 45 days to a maximum of 90 days.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">What are the different types of plans?</p>
+            <p class="faq-answer">Connect (Basic), Connect+ (Premium), Relax (Assisted), MoneyBack</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">When can I claim/apply for the refund, if I am not satisfied with the purchased plan?</p>
+            <p class="faq-answer">As mentioned, for the MoneyBack Plan in case of genuine concerns, a full refund will be processed if requested after 2 weeks of plan activation and within 7 days of plan expiration. (As per Terms and Conditions)</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">Is there any refund/cancellation policy?</p>
+            <p class="faq-answer">In case of genuine concerns, we have a refund policy which is applicable only for the MoneyBack plan; subject to our terms and conditions. If you’re not satisfied with any of the plans, you can always write to us at support@housing.com.</p>
+        </div>
+    </div>
+
+    <div id="loans" class="faq-content" style="display:none;">
+        <div class="faq-item">
+            <p class="faq-question" onclick="oggleAnswer(this)">What types of home loans are available?</p>
+            <p class="faq-answer">We offer various types of home loans including fixed-rate and adjustable-rate mortgages.</p>
+        </div>
+        <!-- Add more questions for the 'Home Loans' category -->
+    </div>
+
+    <div id="protect" class="faq-content" style="display:none;">
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">What is Housing Protect?</p>
+            <p class="faq-answer">Housing Protect provides insurance services for your home and belongings.</p>
+        </div>
+        <!-- Add more questions for the 'Housing Protect' category -->
+    </div>
+
+</div>
+
+<!--------------------------- footer------------------------------------>
+<section class="cta-section">
+    <div class="cta-container">
+      <div class="cta-text">
+        <h2>Looking for a dream home?</h2>
+        <p>We can help you realize your dream of a new home</p>
+      </div>
+      <div class="cta-button">
+        <a href="login.html">Explore Properties &rarr;</a>
+      </div>
+    </div>
+  </section>
+  
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>REAL ESTATE</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Properties</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="aboutus">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="#">Property Management</a></li>
+          <li><a href="#">Buy a Home</a></li>
+          <li><a href="#">Sell a Home</a></li>
+          <li><a href="#">Rent a Home</a></li>
+          <li><a href="#">Mortgage Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>RESOURCES</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Market Reports</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Community Guides</a></li>
+          <li><a href="#">Real Estate News</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Partnerships</a></li>
+          <li><a href="#">Investors</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>FOLLOW US</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Estate Elite <a href="#">Terms</a> | <a href="#">Privacy</a></p>
+      <div class="status">ALL SYSTEMS OPERATIONAL</div>
+    </div>
+  </footer>
+  
+</body>
+</html>

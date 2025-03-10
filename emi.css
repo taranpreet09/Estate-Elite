@@ -1,0 +1,367 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Enable flexbox */
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#c8f7ff;
+    padding: 20px;
+    color: white;
+    width: 100%;
+}
+
+.header .logo img{
+    height: 50px;
+
+}
+
+.header nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+.calculator-container {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    width: 70%;
+    
+}
+
+.input-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input-group {
+    border: 1px solid rgba(128, 128, 128, 0.47);
+    margin-bottom: 20px;
+    padding: 10px;
+    height: 50px;
+    width: fit-content;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: grey;
+}
+
+.input-group input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.input-group span {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+input{
+    outline: none;
+}
+.result{
+    height: max-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.result-area {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    gap: 200px; 
+}
+
+
+.emi-display {
+    
+    font-size: 1rem;
+    color: rgb(128, 128, 128);
+}
+.emi-display span{
+    color: rgba(0, 0, 0, 0.24);
+}
+#monthlyEMI{
+    color: black;
+    font-size: 2rem;
+    font-weight: 500;
+}
+#currencySymbol{
+    color: black;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.total-display p{
+    font-size:0.8rem ;
+    color: gray;
+}
+
+#totalPayable{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#currencySymbol2{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+button {
+    background-color: #a8edf9;
+    
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    width: 260px;
+}
+
+button:hover {
+    background-color: #64b0bd;
+}
+
+.chart-area {
+    width: 300px;
+    height: 300px;
+    
+}
+
+.faq-section{
+    width: 70%;
+}
+
+.faq-container {
+    margin: 40px auto;
+    width: 70%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.faq-container h2, .faq-container h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}
+
+.faq-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.faq-question {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 4px solid #007BFF;
+    margin-bottom: 10px;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #333;
+}
+
+.faq-question.active + .faq-answer {
+    display: block;
+}
+.footer {
+    background-color: #c8f7ff; 
+    color: #002366; 
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    color: #00509e; 
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #00509e; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #002366; 
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #a0d6e8; 
+}
+
+
+@media (max-width: 1200px) {
+    .calculator-container {
+        width: 90%;
+        max-width: 1200px; 
+    }
+
+    .result-area {
+        gap: 50px; 
+        max-width: 1200px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header nav {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .calculator-container {
+        flex-direction: column;
+        width: 95%;
+        max-width: 600px; 
+        align-items: center;
+    }
+
+    .input-area {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .input-group {
+        width: 100%;
+        margin-bottom: 10px;
+        max-width: 600px; 
+    }
+
+    .result-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px; 
+        max-width: 600px; 
+    }
+
+    .chart-area {
+        width: 100%;
+        max-width: 400px; 
+    }
+
+    .faq-container, .footer-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator-container {
+        padding: 15px; 
+        max-width: 400px;
+    }
+
+    .result-area {
+        gap: 20px; 
+        max-width: 400px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+    }
+
+    button {
+        width: 100%; 
+        font-size: 0.9rem;
+    }
+}

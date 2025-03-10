@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="map.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Add this CSS to your map.css or a new CSS file */
+.modal {
+    display: none; 
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    z-index: 1000   ;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>    
+    <header class="header">
+        <div class="logo">
+            <a href="home.html"><img src="assets/estate2.png"></a>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="#" >Contact Us</a>
+            <a href="http://localhost:3000/">Blogs</a>
+            <button id="addPropertyBtn">Add Property</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="estates">
+            <form id="searchForm" class="filter-form">
+                <input type="text" id="searchInput" placeholder="Enter location or estate name">
+                
+                <div class="filter-options">
+                    <select id="type">
+                        <option value="rent">Rent</option>
+                        <option value="buy">Buy</option>
+                    </select>
+                    <select id="propertyType">
+                        <option value="any">Any</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                    </select>
+                    <input type="number" id="minPrice" placeholder="Min Price">
+                    <input type="number" id="maxPrice" placeholder="Max Price">
+                    <select id="bedrooms">
+                        <option value="any">Any Bedrooms</option>
+                        <option value="1">1 Bedroom</option>
+                        <option value="2">2 Bedrooms</option>
+                        <option value="3">3 Bedrooms</option>
+                    </select>
+                    <button type="submit" id="searchBtn">Search</button>
+                </div>
+            </form>
+
+            <div id="estateList">
+            </div>
+        </div>
+
+        <div id="map"></div>
+    </main>
+    <!-- Add this modal HTML to your body -->
+    <div id="addPropertyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="addPropertyForm">
+                <input type="text" id="propertyName" placeholder="Property Name" required>
+                <input type="text" id="propertyAddress" placeholder="Address" required>
+                <input type="number" id="propertyPrice" placeholder="Price" required>
+                <select id="propertyType" required>
+                    <option value="buy">Buy</option>
+                    <option value="rent">Rent</option>
+                </select>
+                <select id="propertyCategory" required>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                </select>
+                <input type="number" id="propertyBedrooms" placeholder="Bedrooms" required>
+                <input type="file" id="propertyImage" accept="image/*" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="map.js"></script>
+   
+</body>
+</html>

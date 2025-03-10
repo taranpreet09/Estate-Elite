@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancy Loan & EMI Calculator</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+
+    .header {
+      background-color: #69bdca;
+      color: white;
+      width: 100%;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .calculator-container {
+      background-color: #25abc063;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      margin-top: 120px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #25abc063;
+      box-shadow: 0 0 8px #25abc0;
+    }
+
+    button {
+      background: #25abc0;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #25abc063;
+    }
+
+    .result {
+      background: #f1f1f1;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      font-size: 18px;
+      color: #333;
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .faq-container {
+      background-color: white;
+      padding: 40px;
+      margin-top: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .faq-question {
+      background-color: #25abc063;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      text-align: left;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .faq-question :hover{
+      background-color: #25abc0 ;
+    }
+
+    .faq-answer {
+      display: none;
+      background-color: #f1f1f1;
+      padding: 15px;
+      margin-top: 5px;
+      border-radius: 10px;
+    }
+
+    .faq-question.active + .faq-answer {
+      display: block;
+    }
+
+    footer {
+      background-color: #25abc0;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px;
+      text-align: left;
+    }
+
+    footer h4 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="container">
+   
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="#calculator">Calculator</a></li>
+      <li><a href="#faq-section">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Loan Calculator Section -->
+<div class="calculator-container" id="calculator">
+  <h1>Loan Calculator</h1>
+
+  <label for="loanAmount">Loan Amount</label>
+  <input type="number" id="loanAmount" placeholder="Enter loan amount">
+
+  <label for="interestRate">Interest Rate (%)</label>
+  <input type="number" id="interestRate" placeholder="Enter interest rate">
+
+  <label for="loanTerm">Loan Term (years)</label>
+  <input type="number" id="loanTerm" placeholder="Enter loan term">
+
+  <button onclick="calculateLoan()">Calculate</button>
+
+  <div class="result" id="result">
+    <p>Monthly Payment: <span id="monthlyPayment"></span></p>
+    <p>Total Payment: <span id="totalPayment"></span></p>
+    <p>Total Interest: <span id="totalInterest"></span></p>
+  </div>
+</div>
+
+<!-- FAQ Section -->
+<div id="faq-section" class="faq-container">
+  <h2>About Loan Calculator</h2>
+  <p>Know how a bank provides a deal for their customers</p>
+  <p>
+    A home loan calculator helps estimate the monthly payments a borrower needs to make based on the total loan amount. This tool enables you to make informed decisions regarding the monthly outflow required to repay your home loan.
+  </p>
+  <p>To calculate your home loan, you'll need to provide the following information:</p>
+  <ul>
+    <li><b>Loan Amount:</b> The total loan amount you wish to borrow for your property.</li>
+    <li><b>Loan Tenure:</b> The length of time (in years) over which you plan to repay the loan.</li>
+    <li><b>Interest Rate:</b> The rate of interest applied to your loan.</li>
+  </ul>
+
+  <h3>Frequently asked questions about Loan Calculator</h3>
+  <p>Know what questions the users frequently ask about loan calculators</p>
+
+  <div class="faq">
+    <button class="faq-question">What is a Loan?</button>
+    <div class="faq-answer">
+      <p>A loan is a sum of money borrowed from a lender that is expected to be paid back with interest.</p>
+    </div>
+
+    <button class="faq-question">What factors affect loan approval?</button>
+    <div class="faq-answer">
+      <p>Factors include credit score, income, debt-to-income ratio, and employment history.</p>
+    </div>
+
+    <button class="faq-question">What is a fixed-rate loan?</button>
+    <div class="faq-answer">
+      <p>A fixed-rate loan has an interest rate that remains constant throughout the term of the loan.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h4>About Us</h4>
+      <p>Your trusted loan calculator that helps you plan your finances wisely.</p>
+      <p>We aim to empower users with accurate information and insights on loan management.</p>
+    </div>
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Calculate Loan</a></li>
+        <li><a href="#faq-section">FAQs</a></li>
+        <li><a href="#">Articles</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@example.com</p>
+      <p>Phone: +1 (555) 123-4567</p>
+      <p>Address: 123 Finance St, Money City, MC 12345</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2024 Loan Calculator. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  function calculateLoan() {
+    let amount = document.getElementById('loanAmount').value;
+    let interestRate = document.getElementById('interestRate').value;
+    let years = document.getElementById('loanTerm').value;
+
+    if (amount === '' || interestRate === '' || years === '') {
+      alert('Please fill all fields');
+      return;
+    }
+
+    let monthlyInterestRate = (interestRate / 100) / 12;
+    let numberOfPayments = years * 12;
+    let monthlyPayment = (amount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+
+    let totalPayment = monthlyPayment * numberOfPayments;
+    let totalInterest = totalPayment - amount;
+
+    document.getElementById('monthlyPayment').textContent = monthlyPayment.toFixed(2);
+    document.getElementById('totalPayment').textContent = totalPayment.toFixed(2);
+    document.getElementById('totalInterest').textContent = totalInterest.toFixed(2);
+
+    document.getElementById('result').style.display = 'block';
+  }
+
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      let answer = button.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>

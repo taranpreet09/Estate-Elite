@@ -1,0 +1,1207 @@
+  /* ---------------------------------------------------- responsive design----------------------------------------------------------------------- */
+  @media screen and (max-width: 1280px) {
+
+    .mySwiper0{
+        width: 75%;
+    }
+
+    .swiper-slide0{
+        width: 50%;
+    }
+
+    .write{
+        position: absolute;
+        left: 550px;
+        width: 350px;
+    }
+
+    .img{
+        width: 500px;
+    }
+    .img2{
+        width: 500px;
+    }
+    .img3{
+        width: 500px;
+    }
+    .con{
+        width: 100%;
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+    .about{
+        height: 700px;
+    }
+    .aboutimg img{
+        height: 400px;
+        width: 350px;
+    }
+
+    #img{
+        height: 120px;
+        width: 200px;
+        position: relative;
+        right: 250px;
+        top: 300px;
+    }
+
+    .aboutcontent{
+        left: 100px;
+        width: 500px;
+    }
+
+    .abouticons i{
+        font-size: 15px;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        background-color: #a4e4ed ;
+        padding: 15px 10px 10px 15px;
+    }
+
+    .modal-content{
+        width: 400px;
+
+    }
+    /* ----------------navbar--------------- */
+    .navbar1{
+        width: 70%;
+    }
+    .logo a{
+        font-size: 20px;
+    }
+    .logo{
+        padding: 0;
+    }
+
+    .nav-links1{
+        width: 350px;
+    }
+
+    .auth-links{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 80px;
+    width: 250px;
+    text-align: center;
+    }
+
+    .auth-links .sign-in-button {
+        height: 25px;
+    }
+
+    .auth-links .add-property {
+        position: relative;
+        top: 5px;
+        height: 30px;
+        padding: 5px;
+        margin: 0;
+        margin-left: 3px;
+    }
+
+    .overlay2 img{
+        height: 400px;
+    }
+
+    .menu{
+        width: 60%;
+        left: 220px;
+    }
+    .menu-item{
+        font-size: 14px;
+    }
+    .search-bar{
+        width: 60%;
+        left: 220px;
+    }
+    #propertyType{
+        font-size: 13px;
+    }
+    #searchBox{
+        font-size: 13px;
+    }
+
+    .social-icons a{
+        font-size: 1.5em;
+    }
+
+    .social-icons a{
+        bottom:80px;
+    }
+     
+
+/*--------------------------------------------- */
+    .con{
+        width:450px ;
+        text-align: center;
+    }
+    .con h1{
+        font-size: 2em;
+    }
+    .mySwiper0{
+        width: 800px;
+        height: 400px;
+    }
+    .img{
+        width: 430px;
+    }
+    .img2{
+        width: 430px;
+    }
+    .img3{
+        width: 430px;
+    }
+    .write{
+        position: absolute;
+        width: 280px;
+        bottom: 200px;
+        left: 450px;
+        top: 50px;
+    }
+    .write p{
+        font-size: 18px;
+    }
+    .write h1{
+        font-size: 28px;
+    }
+
+    .write button{
+     height: 30px;
+    width: 150px;
+    background-color: #25abc0;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    }
+
+    .scroll-title h1{
+        font-size: 35px;
+    }
+
+    .scroller-container {
+        position: relative;
+        width: 100%;
+        padding-left: 50px;
+    }
+    .scroller{
+        gap: 50px;
+        width: 80% ;
+    }
+    .card {
+        width: 515px;
+        height: 600px;
+    }
+    .card-info h2{
+        font-size: 30px;
+    }
+    
+    .featured-img{
+        height: 50px;
+        width: 50px;
+    }
+
+    .card-info p{
+        font-size: 15px;
+        position: relative;
+        left: 80px;
+        bottom: 40px;
+    }
+
+    .i4{
+    height: 45px;
+    padding: 10px 10px 10px 10px
+    ;}
+
+    .i5{
+        height: 45px;
+        padding: 10px 10px 10px 10px;
+    }
+    .i6{
+        height: 45px;
+        padding: 10px 10px 10px 10px;
+    }
+    
+    .mySwiper1{
+        width: 700px;
+    }
+    .text-overlay h1{
+        font-size: 25px;
+    }
+    .text-overlay p{
+        font-size: 15px;
+    }
+    .text-overlay2{
+        left: 520px;
+    }
+    
+    .p1{
+        font-size: 14px;
+    }
+    .p2{
+        font-size: 16px;
+    }
+    .call{
+        left: 530px ;
+    }
+    .call i{
+        font-size: 15px;
+    }
+    .call p{
+        font-size: 15px;
+        position: relative;
+        bottom: 10px ;
+        }
+    .testimonials h1{
+        font-size: 30px;
+    }
+
+    .testimonials p{
+        font-size: 15px;
+    }
+
+    .review-img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .faq-container {
+         width: 60%;
+     }
+     .faq-header h2{
+        font-size: 18px;
+     }
+    .faq-header h1{
+        font-size: 28px;
+    }
+    .faq-categories p{
+        font-size: 17px;
+    }
+    .faq-categories button {
+        margin-top: 10px ;
+        margin-left:0px;
+        cursor: pointer;
+        background: transparent;
+        border-radius: 5px;
+        padding: 15px 10px 15px 10px;
+        font-size: 12px;
+        border: 1px solid grey;
+    }
+    .faq-question {
+        font-size: 18px;
+    }
+    .cta-section{
+        position: relative;
+        bottom: 100px;
+    }
+    .con{
+        width: 100%;
+        text-align: center;
+
+    }
+    
+}
+
+@media screen and (max-width: 991px){
+
+    .navbar1{
+        width: 100%;
+    }
+    .overlay2 img{
+        height: 380px;
+    }
+
+    .menu{
+        left: 20%;
+    }
+    .menu-item{
+        font-size: 11px;
+    }
+    .search-bar{
+        left: 20%;
+    }
+    .social-icons{
+        margin-top: 50px;
+    }
+
+    .con p{
+        font-size: 15px;
+    }
+    .con h1{
+        font-size: 25px;
+    }
+
+    .mySwiper0{
+        width: 600px;
+        height: 350px;
+    }
+
+    .img{
+        width: 330px;
+        background-size: cover;
+    }
+    .img2{
+        width: 330px;
+        background-size: cover;
+    }
+    .img3{
+        width: 330px;
+        background-size: cover;
+    }
+    .write{
+        left: 350px;
+        width: 240px;
+    }
+    .write p{
+        font-size: 15px;
+    }
+    .write h1{
+        font-size: 20px;
+    }
+    .write button{
+        font-size: 13px;
+    }
+
+    .card{
+        width: 420px;
+    }
+
+    .card-info h2{
+        font-size: 25px;
+    }
+    .f-icon{
+        flex-direction: row;
+    justify-content: space-between;
+    }
+
+    .mySwiper1{
+        width: 550px;
+        height: 400px;
+    }
+    .foot{
+        top: 320px;
+    }
+
+    .text-overlay h1{
+        font-size: 18px;
+    }
+    .text-overlay p{
+        font-size: 12px;
+    }
+    .text-overlay2{
+        left: 430px;
+    }
+    .text-overlay2 p{
+        font-size: 12px;
+    }
+    .call{
+        left: 430px;
+    }
+    .call p{
+        font-size: 12px;
+    }
+    .con2 h1{
+        font-size: 25px;
+    }
+    .con2 p{
+        font-size: 13px;
+    }
+
+    .faq-container{
+        width: 600px;
+    }
+    .faq-header h2{
+        font-size: 14px;
+     }
+    .faq-header h1{
+        font-size: 25px;
+    }
+    .faq-categories p{
+        font-size: 17px;
+    }
+    .faq-categories button {
+        padding: 15px 10px 15px 10px;
+        font-size: 11px;
+        
+    }
+    .faq-question {
+        font-size: 15px;
+    }
+    .faq-answer{
+        font-size: 12px;
+    }
+
+    .cta-text h2{
+        font-size: 30px;
+    }
+    .cta-button a{
+        font-size: 11px;
+    }
+    .con{
+        width: 100%;
+        text-align: center;
+
+    }
+    .swiper-slide2 p{
+        font-size: 15px;
+        padding-top: 20px;
+    
+       }
+
+}
+
+@media screen and (max-width: 768px){
+    .navbar1{
+        width: 100%;
+        text-align: left;
+    }
+
+
+
+    .overlay2 img{
+        height:350px;
+    }
+    
+    .menu-item{
+        font-size: 8px;
+    }
+    #propertyType{
+        font-size: 10px;
+    }
+    #searchBox{
+        font-size:10px;
+    }
+
+    .button{
+        font-size: 10px;
+    }
+
+    .con{
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .con p{
+        font-size: 10px;
+    }
+    .con h1{
+        font-size: 20px;
+    }
+
+    .mySwiper0{
+        width: 400px;
+        height: 250px;
+    }
+    .img{
+        width: 230px;
+    }
+    .img2{
+        width: 230px;
+    }
+    .img3{
+        width: 230px;
+    }
+
+    .write{
+        width: 150px;
+        left: 250px;
+    }
+    .write p{
+        font-size: 10px;
+    }
+    .write h1{
+        font-size: 15px;
+    }
+    .write button{
+        font-size: 10px;
+        text-align: left;
+        width: 100px;
+    }
+
+    .scroller{
+        gap:100px;
+        padding-left: 50px;
+    }
+    .card{
+        width: 550px;
+    }
+    .card-info h2{
+        font-size: 30px;
+    }
+    
+    .mySwiper1{
+        width: 400px;
+    }
+    .text-overlay2{
+        left: 280px;
+    }
+
+    .p1{
+        font-size: 12px;
+    }
+    .p2{
+        font-size: 15px;
+        padding-top: 5px;
+    }
+    .call{
+        left: 280px;
+        width: 80px;
+    }
+
+    .testimonials h1{
+        font-size: 28px;
+
+    }
+    .testimonials p{
+        font-size: 13px;
+    }
+    .cta-text h2{
+        font-size: 20px;
+    }
+    .cta-text p{
+        font-size: 14px;
+    }
+    .cta-button a{
+    font-size: 10px;
+    padding: 10px 10px 10px 10px;
+}
+    .faq-container{
+        width: 60%;
+    }
+    .faq-header h1{
+        font-size: 20px;
+    }
+    .faq-categories button{
+        padding: 5px 5px 5px 5px;   
+    }
+    .faq-question{
+        font-size: 13px;
+    }
+    .faq-answer{
+        font-size: 9px;
+    }
+    .swiper-slide2 p{
+        font-size: 15px;
+        padding-top: 20px;
+    
+       }
+
+
+}
+
+@media screen and (max-width: 668px ){
+    .add-property{
+        font-size: 10px;
+    }
+    .sign-in-button{
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:576px){
+
+    .nav-major{
+        justify-content: left;
+    }
+
+    .overlay2{
+        width: 100%;
+    }
+
+    .navbar1{
+        width: 100%;
+    }
+    .logo a{
+        font-size: 15px;
+    }
+    .nav-links1 a{
+        font-size: 10px;
+    }
+    .auth-links{
+        padding: 5px 5px 5px 10px;
+        position:relative;
+        right: 30px;
+    }
+    .sign-in-button{
+       position: relative;
+       top: 15px;
+    }
+    
+
+    .menu{
+        height: 50px;
+    }
+
+    .menu span{
+        font-size: 6px;
+        padding-left: 0;
+    }
+    .search-bar{
+        height:50px ;
+    }
+    #propertyType{
+        font-size: 7px;
+        padding: 5px;
+    }
+    #searchBox{
+        font-size: 7px;
+        padding: 5px;
+    }
+    .search-bar button{
+        padding: 5px;
+        font-size: 8px;
+    }
+    .social-icons{
+        font-size: 10px;
+        position: relative;
+        bottom: 40px;
+        right: 10px;
+    }
+    .mySwiper0{
+        width: 300px ;
+        height: 200px;
+    }
+    .img{
+        width: 170px;
+        background: url("buy1.png");
+        }
+    .write{
+    left: 180px; 
+    width: 100px;
+    }
+    .write p{
+        font-size: 7px;
+    }
+    .write h1{
+        font-size: 10px;
+    }
+    .write button{
+        font-size: 8px;
+        width: fit-content;
+    }
+    .img2{
+        width: 170px;
+        background: url("buy1.png");
+        }
+        .img3{
+            width: 170px;
+            background: url("buy1.png");
+            }
+    .scroller{
+        padding-left:30px ;
+    }
+    .card{
+        width: 380px;
+        height: fit-content;
+    }
+    #featureimg{
+        height: 220px;
+    }
+    .card-info h2{
+        font-size: 20px;
+    }
+    .i1{
+        font-size: 13px;
+    }
+    .i1 span{
+        font-size: 20px;
+    }
+    .i2{
+        font-size: 13px;
+    }
+    .i1 span{
+        font-size: 20px;
+    }
+    .i2{
+        font-size: 13px;
+    }
+    .i2 span{
+        font-size: 20px;
+    }
+    .i3{
+        font-size: 13px;
+    }
+    .i3 span{
+        font-size: 20px;
+    }
+    .featured-img{
+        height: 35px;
+        width: 35px;
+    }
+    .agent{
+        font-size: 10px;
+        top: 10px;
+    }
+    #agent{
+        font-size: 10px;
+        padding-top: 10px;
+        right: 20px;
+    }
+
+    .i4{
+         height: 30px;
+         width: 30px;
+        
+    }
+    .i5{
+        height: 30px;
+        width: 30px;
+   }
+   .i6{
+    height: 30px;
+    width: 30px;
+   }
+   .f-icon span{
+    font-size: 20px;
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+   }
+   .scroll-title h1{
+    font-size: 25px;
+   }
+   .scroll-title p{
+    opacity: 0;
+    
+   }
+   .mySwiper1{
+    width: 300px;
+    height: 220px;
+   }
+   .text-overlay h1{
+    font-size: 10px;
+   }
+   .text-overlay p{
+    font-size: 8px;
+   }
+   .text-overlay2{
+    left: 200px;
+   }
+   .text-overlay2 p{
+    font-size: 8px;
+   }
+   .foot{
+    position: absolute;
+    top: 165px;
+   }
+   .p1{
+    font-size: 8px;
+   } 
+   .p2{
+    font-size: 10px;
+    position: absolute;
+    top: 5px;
+   }
+   .call{
+    left: 190px;
+    height: 20px;
+    width: 80px;
+   }
+   .call i{
+    font-size: 10px;
+    position: absolute;
+   }
+   .call p{
+    font-size: 8px;
+    left: 10px;
+    bottom: 7px;
+   }
+   .testimonials h1{
+    font-size: 20px;
+   }
+   .testimonials p{
+    font-size: 8px;
+   }
+   .cta-text h2{
+    font-size: 15px;
+   }
+   .cta-text p{
+    font-size: 10px ;
+   }
+   .cta-button a{
+    font-size: 8px;
+   }
+   .footer{
+    height: 300px;
+   }
+   .footer-column h4{
+    font-size: 10px;
+   }
+   .footer-column ul li a{
+    font-size: 7px;
+   }
+   .footer-bottom p{
+    font-size: 8px;
+   }
+   .status{
+    font-size: 8px;
+   }
+   .faq-header h2{
+    font-size: 10px;
+   }
+   .faq-header h1{
+    font-size: 15px;
+   }
+   .faq-categories p{
+    font-size: 10px;
+   }
+   .faq-categories button{
+    font-size: 7px;
+   }
+   .faq-question{
+    font-size: 10px;
+   }
+   .faq-answer{
+    font-size: 8px;
+   }
+
+   .swiper-slide2 p{
+    font-size: 15px;
+    padding-top: 20px;
+
+   }
+}
+
+
+
+/* Responsive for tablets (768px and below) */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-image, .about-content {
+        width: 100%;
+    }
+
+    .about-image img, .overlay-image {
+        width: 90%;
+    }
+
+    .overlay-image {
+        margin-top: 15px;
+        bottom: 0;
+        left: 0;
+        position: relative;
+        width: 50%;
+    }
+
+    .about-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .features {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .feature-item {
+        justify-content: center;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .services-btn {
+        margin: 20px 0;
+    }
+}
+
+/* Responsive for small screens (576px and below) */
+@media (max-width: 576px) {
+    .about-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .about-image img, .overlay-image {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .overlay-image {
+        width: 70%;
+    }
+
+    .about-content h1 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .features {
+        gap: 10px;
+    }
+
+    .feature-item {
+        font-size: 12px;
+    }
+
+    .quote {
+        font-size: 12px;
+        padding-left: 5px;
+        border-left-width: 2px;
+    }
+
+    .services-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Responsive for extra small screens (400px and below) */
+@media (max-width: 440px) {
+    .about-content h1 {
+        font-size: 20px;
+    }
+
+    .about-content p {
+        font-size: 12px;
+    }
+
+    .features {
+        gap: 5px;
+    }
+
+    .feature-item {
+        font-size: 10px;
+    }
+
+    .quote {
+        font-size: 10px;
+        padding-left: 3px;
+        border-left-width: 2px;
+    }
+
+    .services-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 440px){
+
+.-major{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.nav-links1{
+    width: 270px;
+}
+.nav-links1 li a{
+    font-size: 7px;
+}
+
+.add-property{
+    display: none;
+}
+.logo a{
+    font-size: 8px;
+}
+.auth-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sign-in-button{
+    width: 50px;
+    padding: 1px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 8px;
+}
+
+.overlay2 img{
+        height: 300px;
+  }
+
+    .menu{
+        width: 70%;
+        height: 25px; 
+        left: 45px;
+    }
+    .menu span{
+    font-size: 5px;
+    padding: 0;
+    }
+    .search-bar{
+        width: 70%;
+        height: 30px;
+        left: 45px;
+    }
+    #propertyType{
+        font-size: 5px;
+        padding: 2px;
+    }
+    #searchBox{
+        font-size: 5px;
+        padding: 3px;
+    }
+    .button{
+        font-size: 5px;
+        padding: 3px;
+    }
+    .social-icons i{
+        font-size: 10px ;
+        left: 30px;
+    }
+    .review-img{
+        left: 40px;
+    }
+    .footer{
+        height: fit-content;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer-column{
+        position: relative;
+        left: 100px;
+    }
+    .footer-column h4{
+
+        font-size: 15px;
+    }
+    .footer-column ul li{
+        font-size: 15px;
+    }
+    .cta-container{
+        margin-top: 30px;
+    }
+    .cta-text h2{
+        font-size: 10px;
+
+    }
+    .cta-text p{
+        font-size: 6px;
+    }
+    .cta-button a{
+        font-size: 6px;
+    }
+    .scroller-container{
+        padding-left: 35px; 
+    }
+    .card{
+        height: 350px;
+        width: 300px;
+    }
+    #featureimg{
+        height: 150px;
+    }
+    .card-info h2{
+        font-size: 15px;
+    }
+    .i1{
+        font-size: 8px;
+    }
+    .i1 span{
+        font-size: 15px;
+    }
+    .i2{
+        font-size: 8px;
+    }
+    .i2 span{
+        font-size: 15px;
+    }
+    .i3{
+        font-size: 8px;
+    }
+    .i3 span{
+        font-size: 15px;
+    }
+    .agent{
+        font-size: 8px;
+    }
+    #agent{
+        font-size: 8px;
+        margin-right: 10px;
+    }
+    .f-icon{
+        display: flex;
+        justify-content: left;
+    }
+    .f-icon span{
+        font-size: 10px;
+    }
+    .i4{
+        height: 5px;
+        width: 5px;
+        display: flex;
+    }
+    .i5{
+        height: 5px;
+        width: 5px;
+        display: flex;
+    }
+    .i6{
+        height: 5px;
+        width: 5px;
+        display: flex;
+    }
+
+    .modal-content{
+        width: 300px;
+        height: 500px;
+    }
+    .modal-content h2{
+        font-size: 15px;
+    }
+    .login-img{
+        height: 80px;
+        width: 80px;
+    }
+    .login-img .material-symbols-outlined{
+        font-size: 60px;
+    }
+
+    .login-link a{
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        
+    }
+    .signup-option p{
+        font-size: 10px;
+    }
+    #signupButton{
+        height: 20px;
+        width: fit-content;
+        font-size: 10px;
+    }
+    .signup-option{
+        padding-bottom: 10px;
+    }
+
+    .social-icons {
+        position: relative;
+        right: 30px;
+    }
+
+
+}
+
+@media screen and (max-width: 573px){
+    .add-property{
+        display: none;
+    }
+
+    .sign-in-button{
+        margin-bottom: 20px;
+    }
+}
+
+
+
