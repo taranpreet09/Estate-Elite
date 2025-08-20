@@ -1,0 +1,347 @@
+<!-- ------------login---------------- -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <h2>Welcome Back!</h2>
+        <div id="close">
+            <span class="close-btn">&times;</span>
+          </div>
+        <div class="login-imgimg">
+        <div class="login-img"><span class="material-symbols-outlined">
+            person_check
+            </span></div></div>
+      
+      <form>
+        <input type="text" placeholder="Enter username" id="username" name="username" required><br>
+
+        <input type="password" placeholder="Enter password" id="password" name="password" required><br>
+        <a class="forgot" href="#">Forgot password?</a><br>
+        <button type="submit" class="login-btn">Login</button>
+        <p>or login with</p>
+      </form>
+      <div class="login-linklink">
+      <div class="login-link">
+        <a href="#" class="google"></a>
+        <a href="#" class="facebook"></a>
+      </div>
+    </div>
+      <div class="signup-option">
+        <p >Don't have an account? <button id="signupButton">Sign Up</button></p>
+    </div>
+    </div>
+  </div>
+  <!-- ------------signup---------------- -->
+  <div id="signupPopup" class="signup-popup">
+    <div class="signup-content">
+        <h2>Welcome! Lets get Started</h2>
+      <span class="close-signup">&times;</span>
+      <div class="login-img"><span class="material-symbols-outlined">
+        group
+        </span></div>
+      <form>
+        <input type="text" placeholder="First Name" id="new-username" required>
+        <input type="text" placeholder="Last Name" id="new-username" required><br>
+        <input type="email" placeholder="Enter Email" id="email"><br>
+        <input type="password" placeholder="Password" id="new-password" required><br>
+        <input type="password" placeholder="Confirm Password" id="new-password" required><br>
+        <input type="radio" name="contactMethod" value="email" id="check"><p style="position: relative; bottom: 35px;right: 55px;">I accept the <u>Terms & Conditions</u></p>
+        <button class="create-account" type="submit">Create Account</button>
+        <p>or sign up with</p>
+        <div class="login-link">
+            <a href="#" class="google"></a>
+            <a href="#" class="facebook"></a>
+          </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    visibility: hidden; 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    border: 1px solid #888;
+    width: 30%; 
+    height: 600px;
+    transition: transform 0.3s ease; 
+    transform: scale(0.9);
+    padding: 20px;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .modal-content h2{
+    height: 50px;
+    width: 100%;
+    background-color: #25abc087;
+    padding-top: 20px;
+  }
+
+.login-img .material-symbols-outlined{
+    font-size: 80px;
+    color: rgba(43, 40, 40, 0.727);
+}
+
+.login-imgimg{
+    display: flex;
+   justify-content: center;
+}
+
+.login-img{
+    height: 100px;
+    width: 100px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128, 0.21);
+    display: flex;
+    justify-content: center;
+
+  }
+
+#username{
+    margin-top: 20px;
+    width: 70%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.255);
+}
+
+#password{
+    margin-top: 20px;
+    width: 70%;
+    height: 30px;   
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.314);
+
+}
+
+.login-link{
+    height: 50px;
+    width:30%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+   
+    
+}
+.login-linklink{
+    display: flex;
+    justify-content: center;
+}
+
+.login-link a{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    
+}
+
+.google{
+    background:url("google.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.facebook{
+    background:url("facebook.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#signupButton{
+    height: 30px;
+    width: 80px;
+    background-color:#25abc087 ;
+    border: none;
+}
+
+#signupButton:hover{
+    cursor: pointer;
+    background-color: #25abc0;
+}
+  .modal.show {
+    opacity: 1; 
+    visibility: visible;
+  }
+
+  .modal.show .modal-content {
+    transform: scale(1); 
+  }
+
+  .forgot{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 10px;
+    
+  }
+
+  .forgot:hover{
+    text-decoration: underline;
+  }
+  .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .login-btn {
+    width: 70%;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #25abc076;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+
+.login-btn:hover {
+    background-color:#25abc0 ;
+  }
+
+.signup-popup {
+    display: none;
+    position: fixed;
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* -------------------------------------- sign up------------------------------------------------------ */
+.signup-content {
+    position: absolute;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 650px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+    z-index: 2000;
+}
+
+.signup-content h2{
+    height: 50px;
+    width: 100%;
+    background-color: #25abc087;
+    padding-top: 20px;
+}
+
+#new-username{
+    margin-top: 30px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.434);
+    width: 40%;
+}
+
+#new-password{
+    margin-top: 30px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.434);
+    width: 82%;
+}
+
+#email{
+    width: 82%;
+    margin-top: 30px;
+    border: none;
+    border-bottom:1px solid rgba(0, 0, 0, 0.434) ;
+
+}
+
+#check{
+    margin-top: 30px;
+    position: relative;
+    right: 40%;
+}
+
+
+.close-signup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.create-account{
+    width: 70%;
+    padding: 10px;
+    margin-top: 0;
+    background-color: #25abc076;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.create-account:hover{
+    cursor: pointer;
+    background-color: #25abc0;
+}
+
+.close-signup:hover,
+.close-signup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Smooth Transition for Popups */
+.modal, .signup-popup {
+    display: none; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    visibility: hidden;
+}
+
+.modal.show, .signup-popup.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}

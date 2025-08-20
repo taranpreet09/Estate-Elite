@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Signup Page</title>
+    <link rel="stylesheet" href="signup.css">
+    <style>
+   body {
+    font-family: Arial, sans-serif;
+    background: #25abc057;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+.logo {
+    width: 120px; 
+    height: auto;
+    object-fit: contain;
+}
+
+.wrapper {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color:#25abc0 ;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+.container {
+    flex: 1;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 90%; 
+    padding: 8px; 
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 90%; 
+    padding: 8px; 
+    margin-top: 20px;
+    background: #25abc0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background: #307d89;
+}
+
+.toggle-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #25abc0;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none; 
+    padding: 0; 
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 0; 
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .image-container {
+        display: none; 
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        width: 95%;
+        margin-top: 70px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="home.html"><img src="assets/estate2.png" alt="Logo" class="logo"></a>
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <h1 id="form-title">Welcome Back :)</h1>
+            <form id="login-form" onsubmit="return validateForm(event)">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                
+                <button type="submit" id="login-button">Login Now</button>
+            </form>
+
+            <form id="signup-form" style="display: none;" onsubmit="return registerUser(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter full name" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                
+                <label for="new-email">Email Address:</label>
+                <input type="email" id="new-email" name="email" placeholder="Enter email" required>
+                
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="password" placeholder="Enter password" required>
+                
+                <button type="submit">Signup</button>
+            </form>
+
+            <span class="toggle-link" onclick="toggleForms()">Don't have an account? Signup</span>
+        </div>
+
+        <div class="image-container">
+            <img src="assets/login1.png" alt="Login Illustration">
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const loginForm = document.getElementById("login-form");
+            const signupForm = document.getElementById("signup-form");
+            const formTitle = document.getElementById("form-title");
+            const toggleLink = document.querySelector(".toggle-link");
+
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                signupForm.style.display = "none";
+                formTitle.textContent = "Welcome Back :)";
+                toggleLink.textContent = "Don't have an account? Signup";
+            } else {
+                loginForm.style.display = "none";
+                signupForm.style.display = "block";
+                formTitle.textContent = "Create Account";
+                toggleLink.textContent = "Already have an account? Login";
+            }
+        }
+
+        function validateForm(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+            const user = storedUsers.find(user => user.email === email && user.password === password);
+
+            if (user) {
+                alert("Login successful!");
+                window.location.href = "map.html";
+            } else {
+                alert("Invalid email or password.");
+            }
+        }
+
+        function registerUser(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const fullName = document.getElementById("full-name").value;
+            const phone = document.getElementById("phone").value;
+            const newEmail = document.getElementById("new-email").value;
+            const newPassword = document.getElementById("new-password").value;
+
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+            if (users.some(user => user.email === newEmail)) {
+                alert("Email is already registered.");
+                return;
+            }
+            users.push({ username, fullName, phone, email: newEmail, password: newPassword });
+            localStorage.setItem("users", JSON.stringify(users));
+            alert("Signup successful! Please login.");
+            toggleForms(); 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Estate Detail</title>
+      <link rel="stylesheet" href="estateDetail.css">
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+      <header class="header">
+          <div class="logo">
+              <a href="home.html"><img src="assets/estate2.png" alt="LamaEstate Logo" class="logo-img"></a>
+              
+              
+          </div>
+          <nav>
+            <a href="home.html">Home</a>
+            <a href="#" >Contact Us</a>
+            <a href="http://localhost:3000/">Blogs</a>
+        </nav>
+      </header>
+
+      <div id="main-content" class="estate-details">
+          <div class="left-panel">
+            <img id="estateImage" class="estate-image" alt="Estate Image" />
+            <h1 id="estateName" class="estate-name">Estate Name</h1>
+            <p id="estateAddress" class="estate-address">Estate Address</p>
+            <p id="estatePrice" class="estate-price">Estate Price</p>
+            
+            
+              
+              <div class="agent-info">
+                  <img src="assets/r5.png" alt="Agent Image" class="agent-img">
+                  <p>Kevin Walker</p>
+              </div>
+
+              <p class="estate-description">
+                  Welcome to this inviting and well-designed home that offers a harmonious blend of comfort, style, and convenience. Perfectly suited for a modern lifestyle, this property boasts spacious rooms, abundant natural light, and thoughtful details throughout. The main living area provides a cozy space for relaxation, while the kitchen comes fully equipped to cater to all your culinary needs. Bedrooms are designed as serene retreats, and the bathrooms feature sleek fixtures and finishes. Conveniently located near essential amenities, schools, and transportation, this home provides the ideal balance between city life and peaceful living. Whether you're looking for your first home or a new investment, this property offers a fantastic opportunity."
+              </p>
+          </div>
+
+          <!-- Right Panel for Sidebar Information -->
+          <div class="right-panel">
+              <section class="general">
+                  <h2>General</h2>
+                  <div class="info-item">
+                      <span class="material-icons">home_repair_service</span>
+                      <div>
+                          <h4>Utilities</h4>
+                          <p>Renter is responsible</p>
+                      </div>
+                  </div>
+                  <div class="info-item">
+                      <span class="material-icons">pets</span>
+                      <div>
+                          <h4>Pet Policy</h4>
+                          <p>Pets Allowed</p>
+                      </div>
+                  </div>
+                  <div class="info-item">
+                      <span class="material-icons">attach_money</span>
+                      <div>
+                          <h4>Property Fees</h4>
+                          <p>Must have 3x the rent in total household income</p>
+                      </div>
+                  </div>
+              </section>
+
+              <section class="room-sizes">
+                <h2>Room Sizes</h2>
+                <div class="size-items">
+                    <div class="size-item">
+                        <span class="material-icons">crop_square</span>
+                        <p id="estateArea"></p>
+                    </div>
+                    <div class="size-item">
+                        <span class="material-icons">king_bed</span>
+                        <p id="estateBedrooms"></p>
+                    </div>
+                    <div class="size-item">
+                        <span class="material-icons">bathtub</span>
+                        <p id="estateBathrooms">bathrooms</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="nearby-places">
+                <h2>Nearby Places</h2>
+                <div class="place-items">
+                    <div class="place-item">
+                        <span class="material-icons">school</span>
+                        <p>School<br><span id="estateSchoolDist" class="distance"></span></p>
+                    </div>
+                    <div class="place-item">
+                        <span class="material-icons">directions_bus</span>
+                        <p>Bus Stop<br><span id="estateBusStop" class="distance">100m away</span></p>
+                    </div>
+                    <div class="place-item">
+                        <span class="material-icons">restaurant</span>
+                        <p>Restaurant<br><span class="distance">200m away</span></p>
+                    </div>
+                </div>
+            </section>
+            
+
+              <div id="estateMap" class="estate-map"></div>
+
+              <div class="actions">
+                  <button class="btn">Send a Message</button>
+                  <button class="btn">Save the Place</button>
+              </div>
+          </div>
+      </div>
+
+
+      
+      <script src="estateDetail.js"></script>
+  </body>
+  </html>
