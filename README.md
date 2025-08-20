@@ -25,9 +25,10 @@
 
 ## 🌐 Live Demo
 
-<a href="#" target="_blank">**[Your Live Demo Link Here]**</a>
+<a href="https://taranpreet09.github.io/Estate-Elite/EstateElite/home.html
+" target="_blank">View</a>
 
-*(Add your deployed link here to let others see your project in action!)*
+
 
 ---
 
@@ -144,8 +145,7 @@ Markdown
 
 ## 🌐 Live Demo
 
-<a href="#" target="_blank">**https://taranpreet09.github.io/Estate-Elite/EstateElite/home.html
-**</a>
+<a href="https://taranpreet09.github.io/Estate-Elite/EstateElite/home.html" target="_blank">View</a>
 
 ---
 
